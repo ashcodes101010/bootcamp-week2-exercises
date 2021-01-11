@@ -28,7 +28,7 @@ The structure of the posts table will be as follows:
 The structure of the friends table will be as follows:
 |column     |      type     |     initial                       |
 |:---------|:-------------|:---------------------------------|               
-|requestor     |   number     |   (foreign key: id from users)|
+|requester     |   number     |   (foreign key: id from users)|
 |requested     |   number     |   (foreign key: id from users)|
 |dateRequested  |  date       |   CURRENT_DATE|
 |status         |  enum     |   ['REQUESTED', 'DECLINED', 'ACCEPTED']|
