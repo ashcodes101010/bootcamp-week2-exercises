@@ -31,7 +31,7 @@ The structure of the friends table will be as follows:
 |requestor     |   number     |   (foreign key: id from users)|
 |requested     |   number     |   (foreign key: id from users)|
 |dateRequested  |  date       |   CURRENT_DATE|
-|status         |  string     |   requested|
+|status         |  enum     |   ['REQUESTED', 'DECLINED', 'ACCEPTED']|
 |dateAccepted |    date       |   NULL|
 
 \
