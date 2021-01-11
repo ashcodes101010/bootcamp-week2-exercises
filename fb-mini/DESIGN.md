@@ -13,6 +13,7 @@ The structure of the users table will be as follows:
 |college      |    string     |       NULL|
 |work          |   string      |      NULL|
 |dateJoined    |   date        |      CURRENT_DATE|
+
 \
 The structure of the posts table will be as follows:
 |column     |      type     |     initial                       |
@@ -22,6 +23,7 @@ The structure of the posts table will be as follows:
 |text       |      string   |       NOT NULL                    |
 |datePosted |      date     |       CURRENT_DATE                |
 |likes      |      number   |       0                           |
+
 \
 The structure of the friends table will be as follows:
 |column     |      type     |     initial                       |
@@ -31,6 +33,7 @@ The structure of the friends table will be as follows:
 |dateRequested  |  date       |   CURRENT_DATE|
 |status         |  string     |   requested|
 |dateAccepted |    date       |   NULL|
+
 \
 The structure of the likes table will be as follows:
 |column     |      type     |     initial                       |
