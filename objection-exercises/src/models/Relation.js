@@ -6,4 +6,5 @@ class Relation extends BaseModel {
   }
 }
 
+
 module.exports = Relation

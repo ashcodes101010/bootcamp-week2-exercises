@@ -8,20 +8,25 @@ const run = async () => {
   // Write Queries and Logs Here !!!
 
   // Insert yourself in the users table
-  await User.query().insert({ firstName: 'Ashleigh', lastName: 'Coltman', age: 18, email: 'ash@example.com' })
+  const Ash = await User.query().insert(
+    { 
+      firstName: 'Ashleigh', 
+      lastName: 'Coltman', 
+      age: 18, 
+      email: 'ash@example.com' 
+    }
+  ).returning('*')
 
   const me = await User.query().where('email', 'ash@example.com').first()
-  console.log(me)
 
   // Insert a pet belonging to you (get your ID from Postico or DBeaver)
-  await Pet.query().insert({
+  const Bucky = await Pet.query().insert({
     ownerId: `${me.id}`,
     type: 'DOG',
     name: 'Bucky',
-  })
+  }).returning('*')
 
-  const allPets = await Pet.query()
-  console.log(allPets)
+  console.log(Ash, Bucky)
 
   // -----
   cleanup()

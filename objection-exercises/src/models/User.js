@@ -2,6 +2,18 @@ const { HasManyRelation, ManyToManyRelation } = require('./BaseModel')
 const BaseModel = require('./BaseModel')
 
 class User extends BaseModel {
+  static get virtualAttributes() {
+    return ['fullName', 'isOver30']
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+
+  get isOver30() {
+    return this.age > 30
+  }
+
   static get tableName() {
     return 'users'
   }
